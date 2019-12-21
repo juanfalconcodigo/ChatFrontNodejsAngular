@@ -1,0 +1,4 @@
+<footer class="navbar-light bg-light d-flex justify-content-center p-3">
+    <a *ngIf="_websocketService.socketStatus" class="text-success" href="#">En Línea</a>
+    <a *ngIf="!_websocketService.socketStatus" class="text-danger" href="#">Fuera de Línea</a>
+</footer>

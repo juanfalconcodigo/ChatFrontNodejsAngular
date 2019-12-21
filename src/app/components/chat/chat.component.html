@@ -1,0 +1,17 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item" aria-current="page">Mensajes</li>
+    </ol>
+</nav>
+<div id="id-chat" class="chat-mensajes list-group-flush">
+    <li *ngFor="let msg of mensajes" class="list-group-item">
+        {{msg.de}} : {{msg.mensaje}}
+    </li>
+</div>
+<form (ngSubmit)="enviar()">
+    <div class="form-group">
+        <label for="id-mensaje">Mensaje:</label>
+        <input [(ngModel)]="texto" name="texto" autofocus autocomplete="off" placeholder="Ingrese mensaje" type="text" class="form-control" id="id-mensaje" aria-describedby="id-help">
+        <small id="id-help" class="form-text text-muted">Ingrese mensaje para poder comunicarse</small>
+    </div>
+</form>

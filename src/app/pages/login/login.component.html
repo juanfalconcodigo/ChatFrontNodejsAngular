@@ -1,0 +1,6 @@
+<form (ngSubmit)="ingresar()" class="mt-5">
+    <div class="form-group">
+        <input [(ngModel)]="nombre" autofocus autocomplete="off" name="nombre" type="text" placeholder="Ingrese su usuario" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <button [disabled]="!(nombre.trim().length>0)" type="submit" class="btn btn-warning w-100">Ingresar</button>
+</form>
